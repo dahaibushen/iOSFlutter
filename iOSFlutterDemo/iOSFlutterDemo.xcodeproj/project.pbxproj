@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F432FCB42785D28BB86871 /* libPods-iOSFlutterDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE363B2FE38E8E0667096C1 /* libPods-iOSFlutterDemo.a */; };
 		85228ADD22A5416B0034B27E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85228ADC22A5416B0034B27E /* AppDelegate.m */; };
 		85228AE022A5416B0034B27E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85228ADF22A5416B0034B27E /* ViewController.m */; };
 		85228AE322A5416B0034B27E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85228AE122A5416B0034B27E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AE363B2FE38E8E0667096C1 /* libPods-iOSFlutterDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFlutterDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85228AD822A5416B0034B27E /* iOSFlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85228ADB22A5416B0034B27E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85228ADC22A5416B0034B27E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		85228AF022A5416D0034B27E /* iOSFlutterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFlutterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85228AF422A5416D0034B27E /* iOSFlutterDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFlutterDemoUITests.m; sourceTree = "<group>"; };
 		85228AF622A5416D0034B27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF798D27102C3A25B948183C /* Pods-iOSFlutterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFlutterDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FFDB32421C934841945B8DCE /* Pods-iOSFlutterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFlutterDemo.release.xcconfig"; path = "Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F432FCB42785D28BB86871 /* libPods-iOSFlutterDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36B0F5D751296C6D0859D8F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF798D27102C3A25B948183C /* Pods-iOSFlutterDemo.debug.xcconfig */,
+				FFDB32421C934841945B8DCE /* Pods-iOSFlutterDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85228ACF22A5416B0034B27E = {
 			isa = PBXGroup;
 			children = (
 				85228ADA22A5416B0034B27E /* iOSFlutterDemo */,
 				85228AF322A5416D0034B27E /* iOSFlutterDemoUITests */,
 				85228AD922A5416B0034B27E /* Products */,
+				36B0F5D751296C6D0859D8F2 /* Pods */,
+				8DFB18255CEE22B93B42A256 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +120,14 @@
 			path = iOSFlutterDemoUITests;
 			sourceTree = "<group>";
 		};
+		8DFB18255CEE22B93B42A256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AE363B2FE38E8E0667096C1 /* libPods-iOSFlutterDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85228AF922A5416D0034B27E /* Build configuration list for PBXNativeTarget "iOSFlutterDemo" */;
 			buildPhases = (
+				54B8D64B153645888816C52A /* [CP] Check Pods Manifest.lock */,
 				85228AD422A5416B0034B27E /* Sources */,
 				85228AD522A5416B0034B27E /* Frameworks */,
 				85228AD622A5416B0034B27E /* Resources */,
@@ -197,6 +223,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B8D64B153645888816C52A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSFlutterDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85228AD422A5416B0034B27E /* Sources */ = {
@@ -361,6 +412,7 @@
 		};
 		85228AFA22A5416D0034B27E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF798D27102C3A25B948183C /* Pods-iOSFlutterDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -380,6 +432,7 @@
 		};
 		85228AFB22A5416D0034B27E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDB32421C934841945B8DCE /* Pods-iOSFlutterDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
