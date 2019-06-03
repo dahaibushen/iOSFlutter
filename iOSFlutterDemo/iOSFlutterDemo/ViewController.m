@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+- (IBAction)nativeToFlutter:(UIButton *)sender {
+    
 }
 
+- (IBAction)flutterToNative:(UIButton *)sender {
+    
+}
 
 @end
