@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
+#import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    FlutterPluginAppLifeCycleDelegate* _lifeCycleDelegate;
+}
 
 @end
 
@@ -16,9 +20,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    ViewController *vc = [[ViewController alloc] init];
+    UINavigationController* root = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = root;
+    [self.window makeKeyAndVisible];
+    
+    [GeneratedPluginRegistrant registerWithRegistry:self];
+    return [_lifeCycleDelegate application:application didFinishLaunchingWithOptions:launchOptions];
 }
+
+- (instancetype)init {
+    if (self = [super init]) {
+        _lifeCycleDelegate = [[FlutterPluginAppLifeCycleDelegate alloc] init];
+    }
+    return self;
+}
+
+- (FlutterViewController*)rootFlutterViewController {
+    UIViewController* viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([viewController isKindOfClass:[FlutterViewController class]]) {
+        return (FlutterViewController*)viewController;
+    }
+    return nil;
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

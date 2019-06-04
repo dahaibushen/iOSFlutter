@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		85228AE822A5416D0034B27E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85228AE622A5416D0034B27E /* LaunchScreen.storyboard */; };
 		85228AEB22A5416D0034B27E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85228AEA22A5416D0034B27E /* main.m */; };
 		85228AF522A5416D0034B27E /* iOSFlutterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85228AF422A5416D0034B27E /* iOSFlutterDemoUITests.m */; };
+		85228B0322A54B330034B27E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85228B0122A54B330034B27E /* DetailViewController.m */; };
+		85228B0422A54B330034B27E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85228B0222A54B330034B27E /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		85228AF022A5416D0034B27E /* iOSFlutterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFlutterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85228AF422A5416D0034B27E /* iOSFlutterDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFlutterDemoUITests.m; sourceTree = "<group>"; };
 		85228AF622A5416D0034B27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85228B0022A54B330034B27E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		85228B0122A54B330034B27E /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		85228B0222A54B330034B27E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		EF798D27102C3A25B948183C /* Pods-iOSFlutterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFlutterDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDB32421C934841945B8DCE /* Pods-iOSFlutterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFlutterDemo.release.xcconfig"; path = "Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +76,6 @@
 				EF798D27102C3A25B948183C /* Pods-iOSFlutterDemo.debug.xcconfig */,
 				FFDB32421C934841945B8DCE /* Pods-iOSFlutterDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,6 +106,9 @@
 				85228ADC22A5416B0034B27E /* AppDelegate.m */,
 				85228ADE22A5416B0034B27E /* ViewController.h */,
 				85228ADF22A5416B0034B27E /* ViewController.m */,
+				85228B0022A54B330034B27E /* DetailViewController.h */,
+				85228B0122A54B330034B27E /* DetailViewController.m */,
+				85228B0222A54B330034B27E /* DetailViewController.xib */,
 				85228AE122A5416B0034B27E /* Main.storyboard */,
 				85228AE422A5416D0034B27E /* Assets.xcassets */,
 				85228AE622A5416D0034B27E /* LaunchScreen.storyboard */,
@@ -139,6 +146,8 @@
 				85228AD422A5416B0034B27E /* Sources */,
 				85228AD522A5416B0034B27E /* Frameworks */,
 				85228AD622A5416B0034B27E /* Resources */,
+				E557F42B5F73EF5939F95558 /* [CP] Embed Pods Frameworks */,
+				85228AFF22A548BE0034B27E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,6 +221,7 @@
 				85228AE822A5416D0034B27E /* LaunchScreen.storyboard in Resources */,
 				85228AE522A5416D0034B27E /* Assets.xcassets in Resources */,
 				85228AE322A5416B0034B27E /* Main.storyboard in Resources */,
+				85228B0422A54B330034B27E /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +257,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		85228AFF22A548BE0034B27E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+		};
+		E557F42B5F73EF5939F95558 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSFlutterDemo/Pods-iOSFlutterDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +301,7 @@
 				85228AE022A5416B0034B27E /* ViewController.m in Sources */,
 				85228AEB22A5416D0034B27E /* main.m in Sources */,
 				85228ADD22A5416B0034B27E /* AppDelegate.m in Sources */,
+				85228B0322A54B330034B27E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +463,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DZ26N5DKRJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iOSFlutterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,6 +484,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iOSFlutterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

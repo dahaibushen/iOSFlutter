@@ -1,3 +1,9 @@
 platform:ios,'9.0'
 target "iOSFlutterDemo" do
+  
+  #这一步是加了两个库 Flutter  跟  FlutterPluginRegistrant
+  #疑问："./" 跟 "../"区别是什么   ./是当前目录    ../是父级目录 /是根目录
+  flutter_application_path = './flutter_module'
+  eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
 end
+
