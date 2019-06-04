@@ -6,25 +6,37 @@ import 'package:flutter/services.dart';
 
 void main() => runApp(_widgetForRoute(ui.window.defaultRouteName));
 
-// 根据iOS端传来的route跳转不同界面
-Widget _widgetForRoute(String route) {
-  return new HomePage();
-  switch (route) {
+//class _widgetForRoute extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context) {
+//    // TODO: implement build
+//    return MaterialApp(
+//      title: '11111',
+//      home: homepage('sdsdsdsddds'),
+//    );
+//  }
+//}
+
+//关于在初始化的时候，待参数的启动问题，使用这种形式
+Widget _widgetForRoute(String router){
+    return new HomePage();
+  switch (router) {
     case 'myApp':
       return new HomePage();
     case 'home':
       return new HomePage();
     default:
       return Center(
-        child: Text('Unknown route: $route', textDirection: TextDirection.ltr),
+        child: Text('Unknown route: $router', textDirection: TextDirection.ltr),
       );
   }
 }
 
+//关于  StatelessWidget  StatefullWidget 带参数怎么处理 有疑问
 //class MyApp extends StatelessWidget {
 //
-//  Widget _home(BuildContext context) {
-//    return new MyHomePage(title: 'Flutter Demo Home Page');
+//  Widget HomePage(BuildContext context) {
+//    return new HomePage(title: 'Flutter Demo Home Page');
 //  }
 //
 //  @override
@@ -45,6 +57,10 @@ Widget _widgetForRoute(String route) {
 
 
 class HomePage extends StatefulWidget {
+//  _HomePageState({Key key, this.title}) : super(key:key);
+
+//  final String title;
+
   _HomePageState createState() => _HomePageState();
 }
 
