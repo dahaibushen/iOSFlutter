@@ -2,6 +2,7 @@ import 'dart:ui' as ui; // 调用window拿到route判断跳转哪个界面
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:flutter_module/HomePage.dart';
+import 'package:flutter_module/thridpage.dart';
 
 
 void main() => runApp(_widgetForRoute(ui.window.defaultRouteName));
@@ -18,7 +19,9 @@ void main() => runApp(_widgetForRoute(ui.window.defaultRouteName));
 //}
 
 //关于在初始化的时候，待参数的启动问题，使用这种形式
+//疑问二，如果一个静态的 跟一个动态的 展示在同一个布局里，如何处理
 Widget _widgetForRoute(String router){
+
     return new HomePage();
   switch (router) {
     case 'myApp':
@@ -74,7 +77,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    // 监听事件，同时发送参数12345
+    // 监听事件，同时发送参数   12345 理解为标记
     eventChannel.receiveBroadcastStream(12345678).listen(_onEvent,onError: _onError);
   }
 
